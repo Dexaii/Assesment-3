@@ -9,6 +9,7 @@ window.addEventListener("load", function(){
         .then (function (result) {
         console.log("Logging secessfully", result.user);
         window.location.href = "home.html";
+        alert(`U've logged Secessfully`);
     })
         .catch (function (error) {
             console.log("Logging Failed", error);
@@ -28,6 +29,7 @@ window.addEventListener("load", function(){
             //....
             console.log('Logging sucessfully');
             window.location.href = "home.html"
+            alert(`U've logged Secessfully`);
         })
         .catch((error) => {
             var errorCode = error.code;
