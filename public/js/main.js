@@ -33,6 +33,7 @@ window.addEventListener("load", function(){
             var errorCode = error.code;
             var errorMessage = error.message;
             console.log("Logging Fail", error);
+            alert("User info isn't correct, Try again");
         });
 
 
