@@ -48,14 +48,14 @@
 
               <!-- email address -->
               <div class="form-floating mb-3">
-                <input required type="email" class="form-control" id="account_email" placeholder="Email address">
+                <input type="email" class="form-control" id="account_email" placeholder="Email address" required>
                 <label for="account_email">Email address</label>
               </div>
 
               <!-- password -->
               <div class="form-floating mb-3">
-                <input required type="password" class="form-control" id="account_passwd" placeholder="Password"
-                  autocomplete="new-password">
+                <input type="password" class="form-control" id="account_passwd" placeholder="Password" required
+                 autocomplete="new-password">
                 <label for="account_passwd">Password</label>
 
                 <!-- forgot -->
@@ -66,7 +66,7 @@
 
               <!-- submot button -->
               <div class="d-grid mb-3">
-                <button type="submit" class="btn btn-primary" id="sign-in-traditional">
+                <button type="button" class="btn btn-primary" id="sign-in-traditional" onclick="auth()">
                   <span>Sign in</span>
                   <svg class="rtl-flip" height="18px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor">

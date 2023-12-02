@@ -8,7 +8,8 @@ window.addEventListener("load", function(){
         firebase.auth().signInWithPopup(provider)
         .then (function (result) {
         console.log("Logging secessfully", result.user);
-        })
+        window.location.href = "home.html";
+    })
         .catch (function (error) {
             console.log("Logging Failed", error);
         });
@@ -26,6 +27,7 @@ window.addEventListener("load", function(){
             var user = userCredential.user;
             //....
             console.log('Logging sucessfully');
+            window.location.href = "home.html"
         })
         .catch((error) => {
             var errorCode = error.code;
@@ -35,6 +37,7 @@ window.addEventListener("load", function(){
 
 
     });
+    
 
 //SignIn by CellPhone
 function getPhoneNumberFromUserInput(){
@@ -51,9 +54,10 @@ firebase.auth().signInWithPhoneNumber(phoneNumber, appVerifier)
       // SMS sent. Prompt user to type the code from the message, then sign the
       // user in with confirmationResult.confirm(code).
       window.confirmationResult = confirmationResult;
-      const code = "123455";
+      const code = "12345";
 confirmationResult.confirm(code).then((result) => {
-  // User signed in successfully.
+  console.log("User Signed In Successfully");
+    window.location.href = "home.html"
   const user = result.user;
   // ...
 }).catch((error) => {
@@ -68,3 +72,5 @@ confirmationResult.confirm(code).then((result) => {
     });
 });
 });
+
+//
